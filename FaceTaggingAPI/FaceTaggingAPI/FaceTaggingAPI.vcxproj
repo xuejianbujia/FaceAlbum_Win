@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\FaceIncludeHeader.h" />
+    <ClInclude Include="..\Roca.h" />
+    <ClInclude Include="..\src\Chope.h" />
+    <ClInclude Include="..\src\EXIF.H" />
+    <ClInclude Include="..\src\FaceAlbum.h" />
+    <ClInclude Include="..\src\FaceFeatureExtractor.h" />
+    <ClInclude Include="..\src\faceMainInterface.h" />
+    <ClInclude Include="..\src\FaceTaggingCommonDef.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\FacePicasaMain.cpp" />
+    <ClCompile Include="..\FaceTestMainAllen.cpp" />
+    <ClCompile Include="..\Roca.cpp" />
+    <ClCompile Include="..\src\Chope.cpp" />
+    <ClCompile Include="..\src\EXIF.CPP" />
+    <ClCompile Include="..\src\FaceAlbum.cpp" />
+    <ClCompile Include="..\src\FaceFeatureExtractor.cpp" />
+    <ClCompile Include="..\src\faceMainInterface.cpp" />
+    <ClCompile Include="..\src\jni_faceTag_Interface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Makefile" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44664326-5191-48B8-859E-A2218475219C}</ProjectGuid>
+    <RootNamespace>FaceTaggingAPI</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../src;../../input/EyeLocation;E:\soft\opencv\build\include;../../mpeg7_feature\include;../../input/feature_gabor;../../input/FaceLocation;../../input/Correct_3d</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;FaceDetection_32_d.lib;EyeLocation_qh_d.lib;landmark_sdm_32_d.lib;Correct_3d_32_d.lib;Feature_Gabor_32_d.lib;mpeg7_feature_32_d.lib;opencv_core246d.lib;opencv_highgui246d.lib;opencv_imgproc246d.lib;opencv_objdetect246d.lib;opencv_features2d246d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib/$(Configuration);E:\soft\opencv\build\x86\vc10\lib;../../input/</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/bin/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../src;../../landmark_sdm/src;E:\soft\opencv\build\include;../../Feature_Gabor/src;../../EyeLocation_qh/src;../../mpeg7_feature/include;../../FaceDetection/src</AdditionalIncludeDirectories>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AdditionalOptions>/Zd %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FaceDetection_64_d.lib;EyeLocation_qh64_d.lib;landmark_sdm_64_d.lib;Feature_Gabor_64_d.lib;mpeg7_feature_64_d.lib;opencv_highgui246d.lib;opencv_imgproc246d.lib;opencv_core246d.lib;opencv_nonfree246d.lib;opencv_objdetect246d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../input/;E:\soft\opencv\build\x64\vc10\lib</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/bin/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateMapFile>false</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../src;../../input/EyeLocation;E:\soft\opencv\build\include;../../mpeg7_feature\include;../../input/feature_gabor;../../input/FaceLocation;../../input/Correct_3d</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;FaceDetection_32.lib;Correct_3d_32.lib;EyeLocation_qh.lib;landmark_sdm_32.lib;Feature_Gabor.lib;mpeg7_feature.lib;opencv_core246.lib;opencv_highgui246.lib;opencv_imgproc246.lib;opencv_objdetect246.lib;opencv_features2d246.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib/$(Configuration);E:\soft\opencv\build\x86\vc10\lib;../../input/EyeLocation;../../input/FaceLocation;../../input/Correct_3d</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/bin/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../src;../../landmark_sdm/src;E:\soft\opencv\build\include;../../Feature_Gabor/src;../../EyeLocation_qh/src;../../mpeg7_feature/include;../../FaceDetection/src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>FaceDetection_64.lib;EyeLocation_qh64.lib;landmark_sdm_64.lib;Feature_Gabor_64.lib;mpeg7_feature_64.lib;opencv_highgui246.lib;opencv_imgproc246.lib;opencv_core246.lib;opencv_nonfree246.lib;opencv_objdetect246.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib/$(Configuration);E:\soft\opencv\build\x64\vc10\lib;../../input</AdditionalLibraryDirectories>
+      <OutputFile>$(SolutionDir)/bin/$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

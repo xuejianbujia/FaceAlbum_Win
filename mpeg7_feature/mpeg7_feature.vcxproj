@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ACBD7361-3CCC-4FAC-8B2C-36F745964590}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mpeg7_feature</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../input/</OutDir>
+    <TargetName>mpeg7_feature_32_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../input/</OutDir>
+    <TargetName>mpeg7_feature_64_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../input/</OutDir>
+    <TargetName>mpeg7_feature_32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>../input/</OutDir>
+    <TargetName>mpeg7_feature_64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include;E:\soft\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include;;E:\soft\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AddressLib\address.h" />
+    <ClInclude Include="include\AddressLib\inter.h" />
+    <ClInclude Include="include\AddressLib\intra.h" />
+    <ClInclude Include="include\AddressLib\momusys.h" />
+    <ClInclude Include="include\AddressLib\nhood.h" />
+    <ClInclude Include="include\AddressLib\vopio.h" />
+    <ClInclude Include="include\ColorLayout.h" />
+    <ClInclude Include="include\ColorStructure.h" />
+    <ClInclude Include="include\ContourShape.h" />
+    <ClInclude Include="include\Convert.h" />
+    <ClInclude Include="include\Descriptors.h" />
+    <ClInclude Include="include\Descriptors\ColorLayout.h" />
+    <ClInclude Include="include\Descriptors\ColorQuant.h" />
+    <ClInclude Include="include\Descriptors\ColorSpace.h" />
+    <ClInclude Include="include\Descriptors\ColorStructure.h" />
+    <ClInclude Include="include\Descriptors\ContourShape.h" />
+    <ClInclude Include="include\Descriptors\DominantColor.h" />
+    <ClInclude Include="include\Descriptors\EdgeHist.h" />
+    <ClInclude Include="include\Descriptors\FaceRecognition.h" />
+    <ClInclude Include="include\Descriptors\HomoTexture.h" />
+    <ClInclude Include="include\Descriptors\RegionShape.h" />
+    <ClInclude Include="include\Descriptors\ScalableColor.h" />
+    <ClInclude Include="include\DominantColor.h" />
+    <ClInclude Include="include\EdgeHistogram.h" />
+    <ClInclude Include="include\Extraction\ColorLayoutExtraction.h" />
+    <ClInclude Include="include\Extraction\ColorSpaceExtraction.h" />
+    <ClInclude Include="include\Extraction\ColorStructureExtraction.h" />
+    <ClInclude Include="include\Extraction\ContourShapeExtraction.h" />
+    <ClInclude Include="include\Extraction\DominantColorExtraction.h" />
+    <ClInclude Include="include\Extraction\EdgeHistExtraction.h" />
+    <ClInclude Include="include\Extraction\EigenFaceData.h" />
+    <ClInclude Include="include\Extraction\FaceRecognitionExtraction.h" />
+    <ClInclude Include="include\Extraction\GoFGoPColorExtraction.h" />
+    <ClInclude Include="include\Extraction\HomoTextureExtraction.h" />
+    <ClInclude Include="include\Extraction\homo_texture_extractor.h" />
+    <ClInclude Include="include\Extraction\imgutil.h" />
+    <ClInclude Include="include\Extraction\RegionShapeExtraction.h" />
+    <ClInclude Include="include\Extraction\ScalableColorExtraction.h" />
+    <ClInclude Include="include\Feature.h" />
+    <ClInclude Include="include\FexWrite.h" />
+    <ClInclude Include="include\Frame.h" />
+    <ClInclude Include="include\GlobalFeatures.h" />
+    <ClInclude Include="include\HomogeneousTexture.h" />
+    <ClInclude Include="include\mpeg7_interface.h" />
+    <ClInclude Include="include\RegionShape.h" />
+    <ClInclude Include="include\ScalableColor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\address.cpp" />
+    <ClCompile Include="src\ColorLayout.cpp" />
+    <ClCompile Include="src\ColorLayoutExt.cpp" />
+    <ClCompile Include="src\ColorLayoutExtraction.cpp" />
+    <ClCompile Include="src\ColorQuant.cpp" />
+    <ClCompile Include="src\ColorSpace.cpp" />
+    <ClCompile Include="src\ColorSpaceExtraction.cpp" />
+    <ClCompile Include="src\ColorStructure.cpp" />
+    <ClCompile Include="src\ColorStructureExt.cpp" />
+    <ClCompile Include="src\ColorStructureExtraction.cpp" />
+    <ClCompile Include="src\ContourShape.cpp" />
+    <ClCompile Include="src\ContourShapeExt.cpp" />
+    <ClCompile Include="src\ContourShapeExtraction.cpp" />
+    <ClCompile Include="src\ConvertExt.cpp" />
+    <ClCompile Include="src\DominantColor.cpp" />
+    <ClCompile Include="src\DominantColorExt.cpp" />
+    <ClCompile Include="src\DominantColorExtraction.cpp" />
+    <ClCompile Include="src\EdgeHist.cpp" />
+    <ClCompile Include="src\EdgeHistExtraction.cpp" />
+    <ClCompile Include="src\EdgeHistogramExt.cpp" />
+    <ClCompile Include="src\FaceRecognition.cpp" />
+    <ClCompile Include="src\FaceRecognitionExtraction.cpp" />
+    <ClCompile Include="src\FeatureExt.cpp" />
+    <ClCompile Include="src\FexWriteExt.cpp" />
+    <ClCompile Include="src\FrameExt.cpp" />
+    <ClCompile Include="src\GlobalFeaturesExt.cpp" />
+    <ClCompile Include="src\GoFGoPColorExtraction.cpp" />
+    <ClCompile Include="src\HomogeneousTextureExt.cpp" />
+    <ClCompile Include="src\HomoTexture.cpp" />
+    <ClCompile Include="src\HomoTextureExtraction.cpp" />
+    <ClCompile Include="src\homo_texture_extractor.cpp" />
+    <ClCompile Include="src\imgutil.cpp" />
+    <ClCompile Include="src\inter.cpp" />
+    <ClCompile Include="src\intra.cpp" />
+    <ClCompile Include="src\mpeg7_interface.cpp" />
+    <ClCompile Include="src\nhood.cpp" />
+    <ClCompile Include="src\RegionShape.cpp" />
+    <ClCompile Include="src\RegionShapeExt.cpp" />
+    <ClCompile Include="src\RegionShapeExtraction.cpp" />
+    <ClCompile Include="src\ScalableColor.cpp" />
+    <ClCompile Include="src\ScalableColorExt.cpp" />
+    <ClCompile Include="src\ScalableColorExtraction.cpp" />
+    <ClCompile Include="src\vopio.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
